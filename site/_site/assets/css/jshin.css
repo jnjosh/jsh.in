@@ -28,7 +28,7 @@ body { background: url(../images/background.png) repeat top left;  }
 #footer a { color: #476286; text-decoration: none; text-shadow: 0 1px 0 #ffffff; }
 #footer a:hover { text-decoration: none; }
 
-#content { min-height: 200px; margin-top: 40px; margin-bottom: 40px; }
+#content { min-height: 175px; margin-top: 20px; margin-bottom: 60px; }
 
 /* @end */
 
@@ -64,7 +64,8 @@ body { background: url(../images/background.png) repeat top left;  }
 #content p { color: #444444; font-size: 16px; margin-top: 10px; text-align:justify; text-shadow: 0 1px 0 #ffffff; }
 #content a.more { background-color: transparent; border: none; color: #476286; cursor: pointer; font-size: 14px; padding: 5px; margin: 0 0 0 -5px; }
 #content a.more:hover { color: #31353B; }
-.post { margin-bottom: 40px; min-height: 175px;} 
+.post { margin-bottom: 40px; min-height: 175px;}
+.archive { min-height: 50px; } 
 .recents { min-height: 175px; }
 
 /* @end */ 
@@ -88,7 +89,7 @@ body { background: url(../images/background.png) repeat top left;  }
 
 /* @group footer */
 
-#footer_topper { background: url(../images/zigzags.png) repeat-x 0 0; clear:both; height: 15px; margin-top: -15px; } 
+#footer_topper { background: url(../images/zigzags.png) repeat-x 0 0; clear:both; height: 15px; margin-top: -15px;} 
 #footer, #push { height: 385px; }
 #footer { background: url(../images/footerbg.png) repeat left top; clear:both; position: relative; width: 100%; } 
 #footer h5 { color: #5B636E; font-size: 22px; }
