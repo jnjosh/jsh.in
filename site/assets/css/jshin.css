@@ -84,16 +84,17 @@ body { background: url(../images/background.png) repeat top left;  }
 #work_comment span { color: #444444; font-size: 19px; font-weight: bold; text-shadow: 0 1px 0 #ffffff; }
 #work_comment a { font-size: 19px; }
 .fullwidth_comment { text-align: center; min-height: 50px; margin-bottom:40px; }
+#jsh_sharing { padding: 10px 0 10px 0;}
 
 /* @end */ 
 
 /* @group footer */
 
 #footer_topper { background: url(../images/zigzags.png) repeat-x 0 0; clear:both; height: 15px; margin-top: -15px;} 
-#footer, #push { height: 385px; }
+#footer, #push { height: 400px; }
 #footer { background: url(../images/footerbg.png) repeat left top; clear:both; position: relative; width: 100%; } 
 #footer h5 { color: #5B636E; font-size: 22px; }
-#footer div.prefooter { color: #444444; height: 280px; padding: 40px 0 0 0; font-size: 14px; text-shadow: 0 1px 0 #ffffff; }
+#footer div.prefooter { color: #444444; height: 280px; padding: 20px 0 0 0; font-size: 14px; text-shadow: 0 1px 0 #ffffff; }
 #inner_footer { color: #555555; }
 
 	/* @group footer results */
