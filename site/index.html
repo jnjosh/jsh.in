@@ -4,8 +4,8 @@ title: Mac OS X and iOS developer - Josh Johnson
 ---
 
 <div id="content" class="container_12">
-	<div id="posts" class="grid_12">
-		{% for post in site.posts limit:2 %}
+	<div id="posts" class="container_12">
+		{% for post in site.posts limit:3 %}
       	<div id="post_0" class="post">
 			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 			<span class="posted">Posted on {{ post.date | date: "%B %d, %Y" }} in </span><span class="tags">{{ post.tags | array_to_sentence_string }}</span>
@@ -15,33 +15,6 @@ title: Mac OS X and iOS developer - Josh Johnson
 			<a href="{{ post.url }}" class="more">Continue Reading  &#187;</a>
 		</div>
 		<div class="clear"></div>
-		{% endfor %}
+		{% endfor %}		
 	</div><!-- end posts -->
 </div><!-- end content -->
-
-<div class="clear"></div>
-<div id="splitter" class="container_12 fullwidth_comment">
-	<img src="assets/images/squiggly.png" width="200" height="53" alt="Squiggly">
-</div>
-			
-<div id="work" class="container_12">
-	<div class="grid_3">
-		<img src="assets/images/filler.png" width="200" height="120" alt="Filler" />
-	</div>
-	
-	<div class="grid_3">
-		<img src="assets/images/filler.png" width="200" height="120" alt="Filler" />
-	</div>
-	
-	<div class="grid_3">
-		<img src="assets/images/filler.png" width="200" height="120" alt="Filler" />
-	</div>
-	
-	<div class="grid_3">
-		<img src="assets/images/filler.png" width="200" height="120" alt="Filler" />
-	</div>
-</div>
-<div class="clear"></div>
-<div id="work_comment" class="container_12 fullwidth_comment">
-	<a href="#">That was fun, see more on my work page &#187;</a>
-</div><!-- end work/portfolio section -->

@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 	<head> 
-		<title>Articles Archive</title> 
+		<title>Global hotkeys in Cocoa on Snow Leopard</title> 
 		<meta http-equiv="content-type" content="text/html;charset=utf-8"/> 
 		<meta name="description" content="iPhone, iPad and Mac OS X Software Developer. I write software in Cocoa, for the Web and even AutoCAD" /> 
 		<meta name="author" content="Josh Johnson" /> 
@@ -28,34 +28,39 @@
 			</div><!-- end header -->
 			
 			<div id="content" class="container_12">
-				<div id="posts" class="container_12">
-					
-<div id="post_0" class="post archive grid_6">
-	<h1><a href="/2010/11/24/things-i-wish-i-knew-yesterday/">Things I wish I knew yesterday</a></h1>
-	<span class="posted">Posted on November 24, 2010 in </span><span class="tags">Cocoa, Programming, and Xcode</span>	
-</div>
+				<div id="posts" class="grid_12">
+					<div id="post" class="post">
+	<h1><a href="">Global hotkeys in Cocoa on Snow Leopard</a></h1>
+	<span class="posted">Posted on July 23, 2010 in </span><span class="tags">Cocoa and Programming</span>
+	<p>
+		I am working on a small app at the office for all our mac users to help locate files on the network (more on this later), I decided to go with a spotlight style NSStatusItem based app. I’ve been really inspired by these apps lately (when done right).  Mostly thanks to Notify.
+	</p>
+	
+	<p>
+		To make this more handy I decided to include a global hotkey. For Leopard and earlier, one problem is you have to use the old Carbon-based events. Most likely due to my Carbon-naivety, I had troubles with this.
+	</p>
+	
+	<p>
+		Luckily, I found this post and learned that Snow Leopard added addGlobalMonitorForEventsMatchingMask:maskhandler: to NSEvent:
+	</p>
 
-<div id="post_0" class="post archive grid_6">
-	<h1><a href="/2010/11/03/over-the-air/">Over the Air Beta Testing for iOS Apps</a></h1>
-	<span class="posted">Posted on November 03, 2010 in </span><span class="tags">iOS and Testing</span>	
-</div>
+	<div class="highlight"><pre><code class="objectivec">		<span class="o">+</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nl">addGlobalMonitorForEventsMatchingMask:</span><span class="p">(</span><span class="n">NSEventMask</span><span class="p">)</span><span class="n">mask</span> <span class="nl">handler:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSEvent</span><span class="o">*</span><span class="p">))</span><span class="n">block</span>
+	
+</code></pre>
+</div>﻿
 
-<div id="post_0" class="post archive grid_6">
-	<h1><a href="/2010/10/14/bad-movies-pecha-kucha/">My talk on bad movies from PechaKucha Raleigh</a></h1>
-	<span class="posted">Posted on October 14, 2010 in </span><span class="tags">Bad Movies and Speaking</span>	
-</div>
+	<p>
+		Read more here: <a href="http://cocoakids.net/global-hotkeys-in-cocoa-on-snow-leopard">Global hotkeys in Cocoa on Snow Leopard</a>
+	</p>
 
-<div id="post_0" class="post archive grid_6">
-	<h1><a href="/2010/07/23/global-hotkeys-cocoa/">Global hotkeys in Cocoa on Snow Leopard</a></h1>
-	<span class="posted">Posted on July 23, 2010 in </span><span class="tags">Cocoa and Programming</span>	
 </div>
-
-<div id="post_0" class="post archive grid_6">
-	<h1><a href="/2010/07/03/toasters-and-trucks/">❖ Toasters and Trucks</a></h1>
-	<span class="posted">Posted on July 03, 2010 in </span><span class="tags">Apple and Tech</span>	
-</div>
-
 <div class="clear"></div>
+					<div class="clear"></div>
+					<div id="jsh_sharing">
+						<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+						<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flog.jsh.in/2010/07/23/global-hotkeys-cocoa/&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=lucida+grande&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
+					</div>
+					<div class="clear"></div>
 				</div><!-- end posts -->
 			</div><!-- end content -->
 			<div class="clear"></div>

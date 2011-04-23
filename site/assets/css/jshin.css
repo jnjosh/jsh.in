@@ -21,7 +21,7 @@ body { background: url(../images/background.png) repeat top left;  }
 #page_wrapper a { color: #476286; text-decoration: none; text-shadow: 0 1px 0 #ffffff; }
 #page_wrapper a:hover { color: #31353B; }
 
-#header { border-bottom: 1px solid #cccccc; height: 75px; }
+#header { height: 75px; }
 #header a { color: #476286; text-decoration: none; text-shadow: 0 1px 0 #ffffff; }
 #header a:hover { text-decoration: none; }
 

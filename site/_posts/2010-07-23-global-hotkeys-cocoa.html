@@ -1,0 +1,33 @@
+---
+layout: post
+title: Global hotkeys in Cocoa on Snow Leopard
+preview: I am working on a small app at the office for all our mac users to help locate files on the network (more on this later), I decided to go with a spotlight style NSStatusItem based app. I’ve been really inspired by these apps lately (when done right).  Mostly thanks to Notify.
+tags:
+- Cocoa
+- Programming
+---
+<div id="post" class="post">
+	<h1><a href="{{ post.url }}">{{ page.title }}</a></h1>
+	<span class="posted">Posted on {{ page.date | date: "%B %d, %Y" }} in </span><span class="tags">{{ page.tags | array_to_sentence_string }}</span>
+	<p>
+		I am working on a small app at the office for all our mac users to help locate files on the network (more on this later), I decided to go with a spotlight style NSStatusItem based app. I’ve been really inspired by these apps lately (when done right).  Mostly thanks to Notify.
+	</p>
+	
+	<p>
+		To make this more handy I decided to include a global hotkey. For Leopard and earlier, one problem is you have to use the old Carbon-based events. Most likely due to my Carbon-naivety, I had troubles with this.
+	</p>
+	
+	<p>
+		Luckily, I found this post and learned that Snow Leopard added addGlobalMonitorForEventsMatchingMask:maskhandler: to NSEvent:
+	</p>
+
+	{% highlight objectivec %}
+		+ (id)addGlobalMonitorForEventsMatchingMask:(NSEventMask)mask handler:(void (^)(NSEvent*))block
+	{% endhighlight %}﻿
+
+	<p>
+		Read more here: <a href="http://cocoakids.net/global-hotkeys-in-cocoa-on-snow-leopard">Global hotkeys in Cocoa on Snow Leopard</a>
+	</p>
+
+</div>
+<div class="clear"></div>
