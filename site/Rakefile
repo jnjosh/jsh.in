@@ -35,7 +35,7 @@ namespace :deploy do
   
   def push(repo)
     sh "git add ."
-    sh "git commit -m 'updated'"
+    sh "git commit -m 'updated via rake...'"
     sh "git push #{repo} master"
   end
 end
