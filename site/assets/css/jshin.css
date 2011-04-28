@@ -21,7 +21,7 @@ body { background: url(../images/background.png) repeat top left;  }
 #page_wrapper a { color: #476286; text-decoration: none; text-shadow: 0 1px 0 #ffffff; }
 #page_wrapper a:hover { color: #31353B; }
 
-#header { height: 75px; }
+#header { height: 85px; border-bottom: 1px #cccccc dashed; }
 #header a { color: #476286; text-decoration: none; text-shadow: 0 1px 0 #ffffff; }
 #header a:hover { text-decoration: none; }
 
@@ -57,15 +57,21 @@ body { background: url(../images/background.png) repeat top left;  }
 	
 /* @end */ 
 
-/* @group work */
+/* @group post */
 
-#content h1 { font-size: 28px; line-height: 34px; margin-bottom: 2px; }
+#content .post h1 { font-size: 28px; line-height: 34px; margin-bottom: 2px; }
+#content .post_medium h1 { font-size: 24px; line-height: 32px; margin-bottom: 2px; }
+#content .post_small h1 { font-size: 16px; line-height: 24px; margin-bottom: 2px; }
+
+#content .post_small h1 a { color: #9BA8BA; }
+
 #content span { color: #999999; font-size: 14px; }
 #content p { color: #444444; font-size: 16px; margin-top: 10px; text-align:justify; text-shadow: 0 1px 0 #ffffff; }
 #content a.more { background-color: transparent; border: none; color: #476286; cursor: pointer; font-size: 14px; padding: 5px; margin: 0 0 0 -5px; }
 #content a.more:hover { color: #31353B; }
-.post { margin-bottom: 40px; min-height: 175px;}
-.archive { min-height: 50px; } 
+.post, .post_medium, .post_small { margin-bottom: 40px; min-height: 175px;}
+
+.archive { min-height: 50px; margin-left: 0; } 
 .recents { min-height: 175px; }
 
 /* @end */ 

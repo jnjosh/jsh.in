@@ -1,0 +1,29 @@
+---
+layout: post
+title: iPhone App UI Tricks - Drag from outside the Screen
+preview: This really isn't a trick, or even a tip. In fact, no additional code was written to get this behavior. However, it is too cool not to show some how and the small pictures on the App Store don't do it justice.
+tags:
+- iPhone
+- Programming
+- UI
+---
+<div id="post" class="post">
+	<h1><a href="{{ post.url }}">{{ page.title }}</a></h1>
+	<span class="posted">Posted on {{ page.date | date: "%B %d, %Y" }} in </span><span class="tags">{{ page.tags | array_to_sentence_string }}</span>
+	<p>
+		This really isn't a trick, or even a tip. In fact, no additional code was written to get this behavior. However, it is too cool not to show some how and the small pictures on the App Store don't do it justice. By placing a UIView (or subclassed view) on the bottom of my main view, messages to touchesMoved:withEvent: are made as soon as your finger crosses into the iPhone's screen. Voila!, the illusion of dragging from the outside of the screen.
+	</p>
+
+	<p>
+		My last app, or rather, <a href="http://tripleddesign.com/iphone-apps.html">Triple D Design's latest app</a> "100 Percent" (<a href="http://www.itunes.com/apps/100percent">which is now available on iTunes</a>) has this little trick. See the video below.
+	</p>
+
+	<p>
+		<iframe src="http://player.vimeo.com/video/7447347?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0"></iframe>
+	</p>
+
+	<p>
+		I know this is insanely simple, but sometimes, the simplest things are the neat too.
+	</p>
+</div>
+<div class="clear"></div>
