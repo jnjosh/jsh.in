@@ -69,7 +69,7 @@ body { background: url(../images/background.png) repeat top left;  }
 #content p { color: #444444; font-size: 16px; margin-top: 10px; text-align:justify; text-shadow: 0 1px 0 #ffffff; }
 #content a.more { background-color: transparent; border: none; color: #476286; cursor: pointer; font-size: 14px; padding: 5px; margin: 0 0 0 -5px; }
 #content a.more:hover { color: #31353B; }
-.post, .post_medium, .post_small { margin-bottom: 40px; min-height: 175px;}
+.post, .post_medium, .post_small { margin-bottom: 25px; }
 
 .archive { min-height: 50px; margin-left: 0; } 
 .recents { min-height: 175px; }
