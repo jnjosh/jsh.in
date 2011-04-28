@@ -16,21 +16,26 @@ end
 desc "Deploy to Dev"
 task :deploy => :"deploy:dev"
 
+desc "Publish"
+task :publish => :"deploy:all"
+
 namespace :deploy do
-  desc "Deploy to Dev"
+  desc "Deploy to github"
   task :dev => :build do
-    rsync "dev.appden.com"
+    push "github"
   end
   
   desc "Deploy to Live"
   task :live => :build do
-    rsync "appden.com"
+    push "origin"
   end
   
   desc "Deploy to Dev and Live"
   task :all => [:dev, :live]
   
-  def rsync(domain)
-    #sh "rsync -rtz --delete _site/ scottwkyle@appden.com:~/#{domain}/"
+  def push(repo)
+    sh "git add ."
+    sh "git commit -m 'updated'"
+    sh "git push #{repo} master"
   end
 end
