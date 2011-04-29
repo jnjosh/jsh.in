@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>The blog of Josh Johnson</title>
+ <link href="http://log.jsh.in/atom.xml" rel="self"/>
+ <link href="http://jsh.in/"/>
+ <updated>2011-04-29T08:25:15-04:00</updated>
+ <id>http://jsh.in/</id>
+ <author>
+   <name>Josh Johnson</name>
+   <email>jnjosh@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Things I wish I knew yesterday</title>
+   <link href="http://jsh.in/2010/11/24/things-i-wish-i-knew-yesterday/"/>
+   <updated>2010-11-24T00:00:00-05:00</updated>
+   <id>http://jsh.in/2010/11/24/things-i-wish-i-knew-yesterday</id>
+   <content type="html">&lt;div id=&quot;post_0&quot; class=&quot;post&quot;&gt;
+	&lt;h1&gt;&lt;a href=&quot;&quot;&gt;Things I wish I knew yesterday&lt;/a&gt;&lt;/h1&gt;
+	&lt;span class=&quot;posted&quot;&gt;Posted on November 24, 2010 in &lt;/span&gt;&lt;span class=&quot;tags&quot;&gt;Cocoa, Programming, and Xcode&lt;/span&gt;
+	&lt;p&gt;
+		Even when you’ve been working in an environment for years, you still find things you never knew. I liken it to learning about a famous actor you had never heard of, but has starred in all your favorite movies.
+	&lt;/p&gt;
+	
+	&lt;p&gt;
+		I found two things that I wish I had known or seen, but for whatever reason, I missed.
+	&lt;/p&gt;
+	
+	&lt;p&gt;	
+		First up, convenience functions for converting a CGRect to a NSString or a NSString to a CGRect.
+	&lt;/p&gt;
+	
+	&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;objectivec&quot;&gt;		&lt;span class=&quot;n&quot;&gt;CGRectFromString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;NSStringFromCGRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CGRect&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+	&lt;p&gt;
+		I’ve often needed to log the frame I am working on and have either created this as a macro or just quickly typed out the string format. Never again! Not sure how much I’ll use the CGRectFromString function, I much prefer the C-style:
+	&lt;/p&gt;
+	
+	&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;objectivec&quot;&gt;		&lt;span class=&quot;n&quot;&gt;CGRect&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rect&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+	&lt;p&gt;	
+		Next up, SPLIT SCREEN VIEW in Xcode. I work on a 30” monitor and sometime having so many open windows gets to be a mess. I’ve often seen the little button for a horizontal split view in the upper right of the editor window, but didn’t know how to do a vertical split.
+	&lt;/p&gt;
+	
+	&lt;p style=&quot;text-align:center;&quot;&gt;
+		&lt;img src=&quot;/articles/images/2010-11-24/xcode_image.png&quot;&gt;
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		The icon even looks like a horizontal split (icon right below the lock in the image). Fortunately, holding OPTION (⌥) while clicking it will create a vertical split window.
+	&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Over the Air Beta Testing for iOS Apps</title>
+   <link href="http://jsh.in/2010/11/03/over-the-air/"/>
+   <updated>2010-11-03T00:00:00-04:00</updated>
+   <id>http://jsh.in/2010/11/03/over-the-air</id>
+   <content type="html">&lt;div id=&quot;post_0&quot; class=&quot;post&quot;&gt;
+	&lt;h1&gt;&lt;a href=&quot;&quot;&gt;Over the Air Beta Testing for iOS Apps&lt;/a&gt;&lt;/h1&gt;
+	&lt;span class=&quot;posted&quot;&gt;Posted on November 03, 2010 in &lt;/span&gt;&lt;span class=&quot;tags&quot;&gt;iOS and Testing&lt;/span&gt;
+	&lt;p&gt;
+		As an enterprise iOS developer, I’ve had the wonders of over-the-air installation for my apps since iOS 4 dropped. I’ve enjoyed it so much so that I’ve pushed to make sure all our users have moved to iOS 4 (not the only reason, of course). So instead of sending a user an IPA file, they simply browse to your site from the device itself.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		A few months ago, Hockey was announced that brought a similar workflow to beta testers of non-enterprise apps. Today, I learned about what could be the coolest start-up for iOS developers: TestFlightApp.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		TestFlight App seems to wrap this process in a web application that makes the whole process even less of a hassle. I haven’t received a beta invitation yet so I can’t talk about it any more than that. Here’s hoping for a fast beta release!
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		&lt;a href=&quot;http://www.testflightapp.com&quot;&gt;TestFlightApp&lt;/a&gt;&lt;br /&gt;
+		&lt;a href=&quot;http://twitter.com/testflightapp&quot;&gt;TestFlightApp on Twitter.&lt;/a&gt;
+	&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>My talk on bad movies from PechaKucha Raleigh</title>
+   <link href="http://jsh.in/2010/10/14/bad-movies-pecha-kucha/"/>
+   <updated>2010-10-14T00:00:00-04:00</updated>
+   <id>http://jsh.in/2010/10/14/bad-movies-pecha-kucha</id>
+   <content type="html">&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+	&lt;h1&gt;&lt;a href=&quot;&quot;&gt;My talk on bad movies from PechaKucha Raleigh&lt;/a&gt;&lt;/h1&gt;
+	&lt;span class=&quot;posted&quot;&gt;Posted on October 14, 2010 in &lt;/span&gt;&lt;span class=&quot;tags&quot;&gt;Bad Movies and Speaking&lt;/span&gt;
+	&lt;p&gt;
+		My talk on Bad Movies from September’s PechaKucha. I think it went over pretty well. The event was well run and many of the other talks were also great. I especially enjoyed a talk about Physicist Richard Feynman and his decade-long attempt to visit Tannu Tuva.
+	&lt;/p&gt;
+	&lt;p&gt;
+		&lt;object width=&quot;640&quot; height=&quot;390&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/ZT1sbvVBVgQ?fs=1&amp;amp;hl=en_US&amp;amp;rel=0&quot;&gt;&lt;/param&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;/param&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot;&gt;&lt;/param&gt;&lt;embed src=&quot;http://www.youtube.com/v/ZT1sbvVBVgQ?fs=1&amp;amp;hl=en_US&amp;amp;rel=0&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;640&quot; height=&quot;390&quot;&gt;&lt;/embed&gt;&lt;/object&gt;
+	&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Global hotkeys in Cocoa on Snow Leopard</title>
+   <link href="http://jsh.in/2010/07/23/global-hotkeys-cocoa/"/>
+   <updated>2010-07-23T00:00:00-04:00</updated>
+   <id>http://jsh.in/2010/07/23/global-hotkeys-cocoa</id>
+   <content type="html">&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+	&lt;h1&gt;&lt;a href=&quot;&quot;&gt;Global hotkeys in Cocoa on Snow Leopard&lt;/a&gt;&lt;/h1&gt;
+	&lt;span class=&quot;posted&quot;&gt;Posted on July 23, 2010 in &lt;/span&gt;&lt;span class=&quot;tags&quot;&gt;Cocoa and Programming&lt;/span&gt;
+	&lt;p&gt;
+		I am working on a small app at the office for all our mac users to help locate files on the network (more on this later), I decided to go with a spotlight style NSStatusItem based app. I’ve been really inspired by these apps lately (when done right).  Mostly thanks to Notify.
+	&lt;/p&gt;
+	
+	&lt;p&gt;
+		To make this more handy I decided to include a global hotkey. For Leopard and earlier, one problem is you have to use the old Carbon-based events. Most likely due to my Carbon-naivety, I had troubles with this.
+	&lt;/p&gt;
+	
+	&lt;p&gt;
+		Luckily, I found this post and learned that Snow Leopard added addGlobalMonitorForEventsMatchingMask:maskhandler: to NSEvent:
+	&lt;/p&gt;
+
+	&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;objectivec&quot;&gt;		&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;addGlobalMonitorForEventsMatchingMask:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSEventMask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;handler:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSEvent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;﻿
+
+	&lt;p&gt;
+		Read more here: &lt;a href=&quot;http://cocoakids.net/global-hotkeys-in-cocoa-on-snow-leopard&quot;&gt;Global hotkeys in Cocoa on Snow Leopard&lt;/a&gt;
+	&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Moleskine for iPad = Dodocase</title>
+   <link href="http://jsh.in/2010/07/10/dodocase/"/>
+   <updated>2010-07-10T00:00:00-04:00</updated>
+   <id>http://jsh.in/2010/07/10/dodocase</id>
+   <content type="html">&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+	&lt;h1&gt;&lt;a href=&quot;&quot;&gt;Moleskine for iPad = Dodocase&lt;/a&gt;&lt;/h1&gt;
+	&lt;span class=&quot;posted&quot;&gt;Posted on April 23, 2011 in &lt;/span&gt;&lt;span class=&quot;tags&quot;&gt;iPad and Cases&lt;/span&gt;
+	&lt;p&gt;
+		I’m generally not a case type person. I try to find the smallest case possible for my iPhone. Still, I wanted something that protected my iPad when tossed in my bag. Generally a fan of the Moleskine, the &lt;a href=&quot;http://www.dodocase.com&quot;&gt;Dodocase&lt;/a&gt; was the top of my list. So how is it? I like it, and it actually makes me want to carry the iPad around more.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		&lt;strong&gt;The Good&lt;/strong&gt;
+	&lt;/p&gt;
+	
+	&lt;p&gt;
+		&lt;img src=&quot;http://farm5.static.flickr.com/4138/4779264814_503497d7b1_m.jpg&quot; border=&quot;0&quot; alt=&quot;Closeup on inside binding&quot; width=&quot;240&quot; height=&quot;142&quot; /&gt;
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		The overall feel is wonderful. It really does lead me to carry it more. It just feels good. I haven’t had the issue I’ve seen on youtube where the iPad easily falls out. I can see how it is possible as the corner foam really is all that is holding it in.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		Opening the front cover shows the &lt;em&gt;Ex Libris &lt;/em&gt;label.﻿ Can’t quite decide if I want to put my name in there or not. Maybe this is a spot for one of my many Apple stickers.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		&lt;a title=&quot;View 'Inside cover' on Flickr.com&quot; href=&quot;http://www.flickr.com/photos/87151163@N00/4778629907&quot;&gt;&lt;img src=&quot;http://farm5.static.flickr.com/4135/4778629907_d4614f6050_m.jpg&quot; border=&quot;0&quot; alt=&quot;Inside cover&quot; width=&quot;240&quot; height=&quot;179&quot; /&gt;&lt;/a&gt;
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		&lt;strong&gt;The not-so-good&lt;/strong&gt;
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		While I don’t regret the dodocase, there are a few things that bug me. First up, the promo photos seem to show a different fabric on the outside of the case. The fabric on my case seem much more smooth and less of the texture that sold me on the case.﻿﻿
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		&lt;span&gt;&lt;a title=&quot;View 'Close up Front' on Flickr.com&quot; href=&quot;http://www.flickr.com/photos/87151163@N00/4779264906&quot;&gt;&lt;img src=&quot;http://farm5.static.flickr.com/4117/4779264906_010cc93fd7_m.jpg&quot; border=&quot;0&quot; alt=&quot;Close up Front&quot; width=&quot;240&quot; height=&quot;148&quot; /&gt;&lt;/a&gt;&lt;/span&gt;
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		Second, the binding feels week. I am a little fearful that it will wear down over time.﻿
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		&lt;a title=&quot;View 'Binding' on Flickr.com&quot; href=&quot;http://www.flickr.com/photos/87151163@N00/4779264690&quot;&gt;&lt;img src=&quot;http://farm5.static.flickr.com/4115/4779264690_8f89afb58a_m.jpg&quot; border=&quot;0&quot; alt=&quot;Binding&quot; width=&quot;240&quot; height=&quot;182&quot; /&gt;&lt;/a&gt;
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		If you want one, you’ll be waiting. We ordered this one in early June and it just now arrived. Now priced $59, it is a bit more than other cases. Knowing it is handmade helps make it feel worth it. Overall, I’m happy with it.﻿﻿
+	&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>❖ Toasters and Trucks</title>
+   <link href="http://jsh.in/2010/07/03/toasters-and-trucks/"/>
+   <updated>2010-07-03T00:00:00-04:00</updated>
+   <id>http://jsh.in/2010/07/03/toasters-and-trucks</id>
+   <content type="html">&lt;div id=&quot;post_0&quot; class=&quot;post&quot;&gt;
+	&lt;h1&gt;&lt;a href=&quot;/2010/07/03/toasters-and-trucks/&quot;&gt;❖ Toasters and Trucks&lt;/a&gt;&lt;/h1&gt;
+	&lt;span class=&quot;posted&quot;&gt;Posted on July 03, 2010 in &lt;/span&gt;&lt;span class=&quot;tags&quot;&gt;Apple and Tech&lt;/span&gt;
+	&lt;p&gt;
+		A great lunch-time conversation occurred yesterday about what the iPad means and the future of the desktop. There have been a lot of questions floating around; moreso before and during WWDC and it’s lack of Mac-based content. So, what is the future of the Mac? Is the iPhone and iOS the future of the Desktop?﻿
+	&lt;/p&gt;
+
+	&lt;span style=&quot;font-style:italic;font-size:18px;&quot;&gt;“I think PCs are going to be like trucks,” Steve Jobs said at D8&lt;/span&gt;
+
+	&lt;p&gt;
+		While that answer is simple, I think it is spot on. Here’s why – PCs are from the 80s. Sure, they’ve made vast improvements, but the Macintosh Classic I had in the early 90s is much closer to my Macbook Pro than it is to my iPad.
+	&lt;/p&gt;
+	&lt;p&gt;
+		What I think is interesting here is the change of the average computer user. Some time ago, a coworker said under the stress of helping a relative, “Windows or Mac OS X is way too complicated and complex for most people”. I didn’t think much of it then, but the iPad and iOS are the direct result of this thinking. Most people (Mom?) don’t need a full on computer operating system. They need, and WANT, a toaster. &lt;strong&gt;The iPad is a toaster.&lt;/strong&gt;
+	&lt;/p&gt;
+	&lt;p&gt;
+		In the 80s when PCs were booming, a larger percentage of them were computer geeks. People who were interested in how it worked, or how they can tear it apart and make it better. The shift that has occurred is most computer users today could care less about how it works. They just want a pipeline to facebook and farmville.
+	&lt;/p&gt;
+	&lt;p&gt;
+		Does this replace the need for the personal computer? I don’t think so. I believe what Steve Jobs said above. It will be a truck; A tool for doing specific things. For example, I love my iPad, but nothing beats my 30” monitor for writing code (except two 30” monitors). Xcode for the iPad would be dreadful.
+	&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Getting kids excited about coding.</title>
+   <link href="http://jsh.in/2010/07/03/getting-kids-excited/"/>
+   <updated>2010-07-03T00:00:00-04:00</updated>
+   <id>http://jsh.in/2010/07/03/getting-kids-excited</id>
+   <content type="html">&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+	&lt;h1&gt;&lt;a href=&quot;&quot;&gt;Getting kids excited about coding.&lt;/a&gt;&lt;/h1&gt;
+	&lt;span class=&quot;posted&quot;&gt;Posted on July 03, 2010 in &lt;/span&gt;&lt;span class=&quot;tags&quot;&gt;Arduino, Programming, and Kids&lt;/span&gt;
+	&lt;p&gt;
+		Want to get your kids excited about coding? Think about looking into arduino. My fashion design and meteorology loving daughter was having a great time and even said “coding is fun!”.
+	&lt;/p&gt;
+	&lt;p&gt;
+		&lt;iframe src=&quot;http://player.vimeo.com/video/13026657?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;400&quot; height=&quot;225&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+	&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>My iPhone App's Icon in the Apple Storefront Display</title>
+   <link href="http://jsh.in/2009/11/25/my-app-in-app-store/"/>
+   <updated>2009-11-25T00:00:00-05:00</updated>
+   <id>http://jsh.in/2009/11/25/my-app-in-app-store</id>
+   <content type="html">&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+	&lt;h1&gt;&lt;a href=&quot;&quot;&gt;My iPhone App's Icon in the Apple Storefront Display&lt;/a&gt;&lt;/h1&gt;
+	&lt;span class=&quot;posted&quot;&gt;Posted on November 25, 2009 in &lt;/span&gt;&lt;span class=&quot;tags&quot;&gt;iPhone, Apps, and Apple&lt;/span&gt;
+	&lt;p&gt;
+		&lt;img style=&quot;padding: 0 0 0 10px;&quot; align=&quot;right&quot; src=&quot;/articles/images/2009-11-25/christmas-photo-1.jpg&quot;&gt; With over 100,000 apps available on the iTunes App Store, developers are striving to be seen. If your iPhone App is on the front page of the App Store, sales tend to rise. What if your App is in the actual Apple Store? Will it help sales? I guess it could, but most users won't make the leap from an image in the store to the app in iTunes. That said, at least you can say &quot;My app was featured in the Apple Store&quot;.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		My app was featured in the Apple Store.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		This morning I received an email from another &lt;a href=&quot;http://lawpower.net/&quot;&gt;iPhone developer&lt;/a&gt; in the Raleigh-Durham area (&lt;a href=&quot;http://tantrumapps.com/&quot;&gt;Tantrum Apps, if you have small kids these apps are a great find&lt;/a&gt;). He shared an image he had taken from one of two local Apple Stores showing the icon for my app, iAdvent (no longer available). Checking out the other local store, I found the icon hanging up as well.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		&lt;img style=&quot;padding: 0 10px 0 0;&quot; align=&quot;left&quot; src=&quot;/articles/images/2009-11-25/christmas-photo-2.jpg&quot;&gt;So how does this happen? I can only speculate. I wasn't contacted by Apple or anything. I assume a store planner designed an in-store &quot;App-Christmas&quot; tree, and searched the store for matching themes. The design was approved, printed and sent to the stores. I have learned that this design is likely in most of the US stores, so my App is hanging up with other Christmas apps all over the US. (If you see this as true or not, let me know, it would be interesting to know if these displays are standard)
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		Still quite exciting to walk into your local Apple Store and see the icon you created hanging up for all to see.
+	&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>iPhone App UI Tricks - Drag from outside the Screen</title>
+   <link href="http://jsh.in/2009/11/05/iphone-app-drag-from-outside/"/>
+   <updated>2009-11-05T00:00:00-05:00</updated>
+   <id>http://jsh.in/2009/11/05/iphone-app-drag-from-outside</id>
+   <content type="html">&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+	&lt;h1&gt;&lt;a href=&quot;&quot;&gt;iPhone App UI Tricks - Drag from outside the Screen&lt;/a&gt;&lt;/h1&gt;
+	&lt;span class=&quot;posted&quot;&gt;Posted on November 05, 2009 in &lt;/span&gt;&lt;span class=&quot;tags&quot;&gt;iPhone, Programming, and UI&lt;/span&gt;
+	&lt;p&gt;
+		This really isn't a trick, or even a tip. In fact, no additional code was written to get this behavior. However, it is too cool not to show some how and the small pictures on the App Store don't do it justice. By placing a UIView (or subclassed view) on the bottom of my main view, messages to touchesMoved:withEvent: are made as soon as your finger crosses into the iPhone's screen. Voila!, the illusion of dragging from the outside of the screen.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		My last app, or rather, &lt;a href=&quot;http://tripleddesign.com/iphone-apps.html&quot;&gt;Triple D Design's latest app&lt;/a&gt; &quot;100 Percent&quot; (&lt;a href=&quot;http://www.itunes.com/apps/100percent&quot;&gt;which is now available on iTunes&lt;/a&gt;) has this little trick. See the video below.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		&lt;iframe src=&quot;http://player.vimeo.com/video/7447347?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		I know this is insanely simple, but sometimes, the simplest things are the neat too.
+	&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Are we in the Wild Wild West of iPhone App Marketing?</title>
+   <link href="http://jsh.in/2009/11/04/wild-wild-west-iphone/"/>
+   <updated>2009-11-04T00:00:00-05:00</updated>
+   <id>http://jsh.in/2009/11/04/wild-wild-west-iphone</id>
+   <content type="html">&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+	&lt;h1&gt;&lt;a href=&quot;&quot;&gt;Are we in the Wild Wild West of iPhone App Marketing?&lt;/a&gt;&lt;/h1&gt;
+	&lt;span class=&quot;posted&quot;&gt;Posted on November 04, 2009 in &lt;/span&gt;&lt;span class=&quot;tags&quot;&gt;iPhone, Apple, and Thoughts&lt;/span&gt;
+	&lt;p&gt;
+		&lt;img style=&quot;padding: 0 0 0 10px;&quot; align=&quot;right&quot; src=&quot;/articles/images/2009-11-04/iphone.png&quot;&gt; I don't remember where, or when; but I heard someone recently say &quot;we are in the wild west of iPhone Apps&quot;. Is this really true?
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		Yesterday, I attended the local &lt;a href=&quot;http://www.meetup.com/iPhone-Developers/&quot;&gt;iPhone Developer meetup&lt;/a&gt; (maybe that is where I heard it). The topic was iPhone App Marketing and featured some great presentations on where to go to spread the word, and what to say. It all goes back to one principle: Start with a great App, then communicate it well.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		There is this feeling though, not just locally, that the app store is in the wild west and people are taking advantage of that to be the next big thing. Well, of course they are. I think the build a business overnight success of the App Store is even more few and far between than we like to think (or hope), but there are still a lot of devices out there.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		You might not make it to the scale some have, but you can still succeed. In our area, there are dozens or hundreds, I can only think of one who &lt;a href=&quot;http://www.ethannicholas.com/iShoot/&quot;&gt;made the big jump in leaving a day job&lt;/a&gt;. So, are we in the Wild Wild West? I don't believe so.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		(Disclaimer: I'm a coder, not a marketer, not a salesman, not even a businessman.)
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		Sure, there are &lt;a href=&quot;http://recombu.com/news/app-friday-iphone-app-store-is-a-squatters-delight_M11134.html&quot;&gt;people squatting on app names&lt;/a&gt;, &lt;a href=&quot;http://gizmodo.com/5329756/third-largest-app-store-developer-gets-banned-for-sucking&quot;&gt;pushing out so many junk iPhone apps they are banned from the store&lt;/a&gt;, and several other crazy stories. In those areas, sure, wildness can roam. But how is this different from other industry?
+	&lt;/p&gt;
+		
+
+	&lt;p&gt;
+		An example: My other passion is filmmaking. What are the chances that I make a movie that will be the next &lt;a href=&quot;http://www.imdb.com/title/tt1179904/&quot;&gt;Paranormal Activity&lt;/a&gt;? About the same as writing the next iShoot. Is this really a problem with the app store or is it sheer numbers. People pump out movies at an unbelievable rate just to make small audiences.
+	&lt;/p&gt;
+
+	
+	&lt;p&gt;
+		Thanks to YouTube, everyone is a filmmaker. Thanks to the iPhone, everyone is an app developer. In other words, every industry has trash.
+	&lt;/p&gt;
+
+	
+	&lt;p&gt;
+		I don't believe that taking advantage of what Apple provides is bad. You do what you can to make your product sell. If you find your niche, you have to work it or it won't be with you long. That is not the Wild West, that is business. I wish for people to stop buying fart apps, but their existence is not a reflection of the app store. It is a reflection of society.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		For what it's worth, I really like how &lt;a href=&quot;http://tantrumapps.com/&quot;&gt;Tantrum Apps&lt;/a&gt; has found a niche and has worked on it. This really goes well with a &lt;a href=&quot;http://37signals.com/svn/posts/981-the-secret-to-making-money-online&quot;&gt;presentation from David Heinemeier&lt;/a&gt; on making money online (by not trying to be the next Twitter); find your niche and work it.
+	&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>iPhone App Design Evolution - 100percent</title>
+   <link href="http://jsh.in/2009/09/30/iphone-app-design-evolution/"/>
+   <updated>2009-09-30T00:00:00-04:00</updated>
+   <id>http://jsh.in/2009/09/30/iphone-app-design-evolution</id>
+   <content type="html">&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+	&lt;h1&gt;&lt;a href=&quot;&quot;&gt;iPhone App Design Evolution - 100percent&lt;/a&gt;&lt;/h1&gt;
+	&lt;span class=&quot;posted&quot;&gt;Posted on September 30, 2009 in &lt;/span&gt;&lt;span class=&quot;tags&quot;&gt;iPhone, Programming, and UI&lt;/span&gt;
+	&lt;p&gt;
+		Here it is, yet another video showing the process of creating an iPhone app, just a bit &lt;a href=&quot;http://www.taptaptap.com/blog/convert-design-evolution/&quot;&gt;inspired by the video posted by tap tap tap&lt;/a&gt;. As you'll see, this whole post is full of inspiration.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		My latest project has been for a &lt;a href=&quot;http://www.tripleddesign.com&quot;&gt;client&lt;/a&gt; that was looking for a focused percentage calculator. A quick search through the App Store shows a lot of tip calculators and even some percentage calculators. It would be very easy to pop a few controls and some simple math together to make an app, but aren't Mac / iPhone interfaces supposed to be a bit more thought out? Well, yeah.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		Keep reading for a video showing the process of designing the app from sketch, to final product. Or just &lt;a href=&quot;http://www.itunes.com/apps/100percent&quot;&gt;check out the app on iTunes&lt;/a&gt; (iTunes link)
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		&lt;strong&gt;More on Inspiration&lt;/strong&gt;
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		Ok, I said the post would be about inspiration. You don't have to look far to see the inspiration for the design of 100percent. &lt;a href=&quot;http://tapbots.com/&quot;&gt;Tapbots&lt;/a&gt; create wonderful apps that are &lt;em&gt;&quot;utility robots designed and engineered for your iPhone and iPod Touch&quot;&lt;/em&gt;. Now, 100percent is not a robot and not a direct clone, but you have to give credit when its due.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		&lt;iframe src=&quot;http://player.vimeo.com/video/6843889?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;320&quot; height=&quot;480&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		Learn more about 100percent at &lt;a href=&quot;http://www.tripleddesign.com&quot;&gt;Triple D Design&lt;/a&gt; or &lt;a href=&quot;http://www.itunes.com/apps/100percent&quot;&gt;buy it now on the iTunes App Store&lt;/a&gt;
+	&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ 
+</feed>
