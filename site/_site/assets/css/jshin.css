@@ -4,7 +4,6 @@
 #5B636E
 #6388BA
 #31353B 
-
 */
 
 /* @group page level */
@@ -12,6 +11,9 @@
 * { font-family: Helvetica, Arial, serif; margin: 0; padding: 0; }
 body { background: url(../images/background.png) repeat top left;  }
 .page { height: 100%; }
+sup { font-size: 12px;}
+sup > a { text-decoration: underline;}
+#super { font-size: 12px; color: #999999;}
 
 /* @end */
 
@@ -21,7 +23,7 @@ body { background: url(../images/background.png) repeat top left;  }
 #page_wrapper a { color: #476286; text-decoration: none; text-shadow: 0 1px 0 #ffffff; }
 #page_wrapper a:hover { color: #31353B; }
 
-#header { height: 85px; border-bottom: 1px #cccccc dashed; }
+#header { height: 85px; border-bottom: 1px #eeeeee solid; }
 #header a { color: #476286; text-decoration: none; text-shadow: 0 1px 0 #ffffff; }
 #header a:hover { text-decoration: none; }
 
