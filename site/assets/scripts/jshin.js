@@ -103,9 +103,13 @@ jnjosh.application = function() {
 			'transitionOut'	: 'elastic',
 			'centerOnScroll': true,
 			'overlayColor'  : "#000",
-			'cyclic'        : true
+			'cyclic'        : true,
+			'titleShow'		: true,
+			'titlePosition' : 'over'
 		});
 	}
+
+
 	
 	return {
 		formatTweet: function(msg) { _format_tweet(msg); },
