@@ -124,32 +124,8 @@ h3 { font-size: 18px; margin:0; padding:0;}
 
 #applesearch { margin: 5px 0 0 0; }
 
-button.downloadButton {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	color: #878787;
-	padding: 10px 20px;
-	background: -moz-linear-gradient(
-		top,
-		#fcfcfc 0%,
-		#ffffff 25%,
-		#bfbfbf);
-	background: -webkit-gradient(
-		linear, left top, left bottom, 
-		from(#fcfcfc),
-		color-stop(0.25, #ffffff),
-		to(#bfbfbf));
-	border-radius: 0px;
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-	border: 1px solid #ffffff;
-	-moz-box-shadow:
-		0px 0px 0px rgba(000,000,000,0),
-		inset 0px 0px 1px rgba(031,031,031,1);
-	-webkit-box-shadow:
-		0px 0px 0px rgba(000,000,000,0),
-		inset 0px 0px 1px rgba(031,031,031,1);
-	text-shadow:
-		0px -1px 0px rgba(000,000,000,0.2),
-		0px 1px 0px rgba(255,255,255,0.3);
-}
+/* @group post styles */
+
+#bigtext { font-size: 20px; color: #000000; font-weight: bold; text-align: justify; border: 1px solid #cccccc; background-color: #c0c0c0;}
+
+/* @end */
