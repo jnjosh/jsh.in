@@ -16,8 +16,9 @@ sup > a { text-decoration: underline;}
 #super { font-size: 12px; color: #999999;}
 .quotage { font-style: italic; }
 h3 { font-size: 18px; margin:0; padding:0;}
-blockquote { font-size: 16px; color: #333333; padding: 10px 0 10px 20px; border-left: 5px solid #cccccc; }
-blockquote > span { font-style: italic; color: #999999; }
+blockquote {  padding: 10px 0 10px 20px; border-left: 5px solid #cccccc;  }
+blockquote p { font-size: 16px; font-style: italic; color: #333333;}
+blockquote span { font-size:16px; font-style: italic; color: #999999; }
 
 /* @end */
 
