@@ -4,7 +4,7 @@
  <title>The blog of Josh Johnson</title>
  <link href="http://log.jsh.in/atom.xml" rel="self"/>
  <link href="http://jsh.in/"/>
- <updated>2011-12-06T01:41:49-05:00</updated>
+ <updated>2011-12-06T01:56:02-05:00</updated>
  <id>http://jsh.in/</id>
  <author>
    <name>Josh Johnson</name>
@@ -88,9 +88,10 @@
 
 		&lt;/div&gt;
 		&lt;div class=&quot;grid_4&quot;&gt;
-			&lt;a href=&quot;/articles/images/2011-12-05/cocaconf.png&quot; class=&quot;flickr-box&quot;&gt;&lt;img src=&quot;/articles/images/2011-12-05/cocaconf.png&quot; align=&quot;right&quot; width=&quot;260px&quot;&gt;&lt;/a&gt;
-			&lt;a href=&quot;/articles/images/2011-12-05/appforthat.png&quot; class=&quot;flickr-box&quot;&gt;&lt;img src=&quot;/articles/images/2011-12-05/appforthat.png&quot; align=&quot;right&quot; width=&quot;260px&quot;&gt;&lt;/a&gt;
-			&lt;a href=&quot;/articles/images/2011-12-05/afterparty.png&quot; class=&quot;flickr-box&quot;&gt;&lt;img src=&quot;/articles/images/2011-12-05/afterparty.png&quot; align=&quot;right&quot; width=&quot;260px&quot;&gt;&lt;/a&gt;
+			&lt;a href=&quot;/articles/images/2011-12-05/cocoaconf.png&quot; class=&quot;flickr-box&quot;&gt;&lt;img src=&quot;/articles/images/2011-12-05/cocoaconf-thumb.png&quot; align=&quot;right&quot; width=&quot;260px&quot;&gt;&lt;/a&gt;
+			&lt;a href=&quot;/articles/images/2011-12-05/cocaconf.png&quot; class=&quot;flickr-box&quot;&gt;&lt;img src=&quot;/articles/images/2011-12-05/cocaconf-thumb.png&quot; align=&quot;right&quot; width=&quot;260px&quot;&gt;&lt;/a&gt;
+			&lt;a href=&quot;/articles/images/2011-12-05/appforthat.png&quot; class=&quot;flickr-box&quot;&gt;&lt;img src=&quot;/articles/images/2011-12-05/appforthat-thumb.png&quot; align=&quot;right&quot; width=&quot;260px&quot;&gt;&lt;/a&gt;
+			&lt;a href=&quot;/articles/images/2011-12-05/afterparty.png&quot; class=&quot;flickr-box&quot;&gt;&lt;img src=&quot;/articles/images/2011-12-05/afterparty-thumb.png&quot; align=&quot;right&quot; width=&quot;260px&quot;&gt;&lt;/a&gt;
 		&lt;/div&gt;
 
 	&lt;/div&gt;
