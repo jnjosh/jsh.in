@@ -4,13 +4,42 @@
  <title>The blog of Josh Johnson</title>
  <link href="http://log.jsh.in/atom.xml" rel="self"/>
  <link href="http://jsh.in/"/>
- <updated>2011-12-06T08:51:45-05:00</updated>
+ <updated>2011-12-06T20:37:17-05:00</updated>
  <id>http://jsh.in/</id>
  <author>
    <name>Josh Johnson</name>
    <email>jnjosh@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Foundation Monday - NSArray</title>
+   <link href="http://jsh.in/2011/12/13/foundation_nsarray/"/>
+   <updated>2011-12-13T00:00:00-05:00</updated>
+   <id>http://jsh.in/2011/12/13/foundation_nsarray</id>
+   <content type="html">&lt;div id=&quot;post_foundation_nsarray&quot; class=&quot;post&quot;&gt;
+	&lt;div class=&quot;container_12&quot;&gt;
+		
+		&lt;div class=&quot;grid_12&quot;&gt;
+			&lt;h1&gt;&lt;a href=&quot;&quot;&gt;Foundation Monday - NSArray&lt;/a&gt;&lt;/h1&gt;
+			&lt;span class=&quot;posted&quot;&gt;Posted on December 13, 2011 in &lt;/span&gt;&lt;span class=&quot;tags&quot;&gt;Cocoa, Foundation, and Development&lt;/span&gt;
+
+			&lt;p style=&quot;font-style:italic&quot;&gt;
+			In an effort to blog more, I'm creating a new series of posts all focused on Cocoa's base framework, Foundation. Each week I'll write about a class in the Foundation framework in alphabetical order. This week I'll be covering NSArray (and NSMutableArray), Foundation's easy to use array object for storing ordered data.
+			&lt;/p&gt;
+
+
+			&lt;div class=&quot;container_12&quot; id=&quot;super&quot;&gt;
+				&lt;a name=&quot;super_1&quot; /&gt;1. Apparently, the Thursday that people started arriving at CocoaConf (for either the tutorial or the NSCoder Night) was the same day that DoubleTree decided to rebrand the Brownstone. I even drove pass the hotel that night..&lt;a href=&quot;#ident_1&quot;&gt;[↩]&lt;/a&gt;&lt;br /&gt;
+				&lt;a name=&quot;super_2&quot; /&gt;2. Originally it was two, but thankfully they allowed me to drop the AutoCAD for Mac plugin session..&lt;a href=&quot;#ident_3&quot;&gt;[↩]&lt;/a&gt;&lt;br /&gt;
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</content>
+ </entry>
  
  <entry>
    <title>CocoaConf Raleigh 2011</title>
