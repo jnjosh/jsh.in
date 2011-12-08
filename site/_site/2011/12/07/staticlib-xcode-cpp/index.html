@@ -1,12 +1,12 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 	<head> 
-		<title>Mac OS X and iOS developer - Josh Johnson</title> 
+		<title>Static Linking with C++ Project in Xcode</title> 
 		<meta http-equiv="content-type" content="text/html;charset=utf-8"/> 
 		<meta name="description" content="iPhone, iPad and Mac OS X Software Developer. I write software in Cocoa, for the Web and AutoCAD" /> 
-		<meta name="author" content="Josh Johnson" />
+		<meta name="author" content="Josh Johnson" /> 
 		<link href="http://feeds.feedburner.com/jshin" rel="alternate" title="Josh Johnson" type="application/atom+xml" />
-		 
+		
 		<link rel="stylesheet" href="/assets/css/reset.css" type="text/css" charset="utf-8" />
 		<link rel="stylesheet" href="/assets/css/text.css" type="text/css" charset="utf-8" />
 		<link rel="stylesheet" href="/assets/css/960.css" type="text/css" charset="utf-8" />
@@ -30,59 +30,53 @@
 			</div><!-- end header -->
 			
 			<div id="content" class="container_12">
-	<div id="posts" class="grid_8">
+				<div id="posts" class="container_12">
+					<div id="post_staticcpp" class="post">
+	<div class="container_12">
 		
-      	<div id="post_0" class="post">
-			<h1><a href="/2011/12/07/staticlib-xcode-cpp/">Static Linking with C++ Project in Xcode</a></h1>
+		<div class="grid_12">
+			<h1><a href="">Static Linking with C++ Project in Xcode</a></h1>
 			<span class="posted">Posted on December 07, 2011 in </span><span class="tags">Development and Xcode</span>
-			<p>
-				This week at NSCoder Night, another developer was trying to statically link the MySQL library. He had initially linked it as a dynamic library and couldn't seem to get it working with Xcode. After working with it for a little while I figured out what needed to happen; and it wasn't clear. Here I'll discuss what process I went through to track down the problem and what tools I used.
-			</p>
-			<a href="/2011/12/07/staticlib-xcode-cpp/" class="more">Continue Reading  &#187;</a>
-		</div>
-		<div class="clear"></div>
-		
-      	<div id="post_0" class="post">
-			<h1><a href="/2011/12/06/cocoaconf-2011/">CocoaConf Raleigh 2011</a></h1>
-			<span class="posted">Posted on December 06, 2011 in </span><span class="tags">Cocoa, Conferences, Community, and Speaking</span>
-			<p>
-				This weekend I was a speaker and attendee at CocoaConf; a 2-day conference series for Mac and iOS developers. It was a small conference that left time for people to actually meet each other and had many great sessions from great developers. Here I'll review the conference, a selection of my favorite sessions, and a post-mortem of my sessions.
-			</p>
-			<a href="/2011/12/06/cocoaconf-2011/" class="more">Continue Reading  &#187;</a>
-		</div>
-		<div class="clear"></div>
-		
-      	<div id="post_0" class="post">
-			<h1><a href="/2011/09/05/working-without-a-clock/">Back to blogging and working without a clock</a></h1>
-			<span class="posted">Posted on September 05, 2011 in </span><span class="tags">Getting things done</span>
-			<p>
-				It's that time of year again. That time, late in the year, where I start wishing I blogged more often. It actually started earlier this year when I rewrote this whole blog1 back in March.
-			</p>
-			<a href="/2011/09/05/working-without-a-clock/" class="more">Continue Reading  &#187;</a>
-		</div>
-		<div class="clear"></div>
-				
-	</div><!-- end posts -->
 
-	<div class="grid_1">&nbsp;</div>
+			<p style="font-style:italic">
+			This week at NSCoder Night, another developer was trying to statically link the MySQL library. He had initially linked it as a dynamic library and couldn't seem to get it working with Xcode. After working with it for a little while I figured out what needed to happen; and it wasn't clear. Here I'll discuss what process I went through to track down the problem and what tools I used.
+			</p>
 
-	<div id="work" class="grid_3">
-		<span>Mac App: JobBox</span>
-		<a href="assets/images/JobBox/Jobbox1.png" class="flickr-box" rel="JobBox"><img src="assets/images/JobBox/Jobboxthumb.png" title="Mac App - JobBox" /></a><a href="assets/images/JobBox/Jobbox2.png" class="flickr-box" rel="JobBox" /><a href="assets/images/JobBox/Jobbox3.png" class="flickr-box" rel="JobBox" />
-
-		<span>iPhone App: <a href="http://www.itunes.com/apps/100percent">100 Percent</a></span>
-		<a href="assets/images/100percent/100percent1.png" class="flickr-box" rel="100percent"><img src="assets/images/100percent/100thumb.png" title="iPhone App - 100 Percent" /></a><a href="assets/images/100percent/100percent2.png" class="flickr-box" rel="100percent" /><a href="assets/images/100percent/100percent3.png" class="flickr-box" rel="100percent" />
-		
-		<span>iPhone App: <a href="http://itunes.apple.com/us/app/fun-for-kids-activities-for/id403431352?mt=8">Fun For Kids</a></span>
-		<a href="assets/images/FunForKids/FunForKids1.png" class="flickr-box" rel="FunForKids"><img src="assets/images/FunForKids/Kidsthumb.png" title="iPhone App - Fun For Kids" /></a><a href="assets/images/FunForKids/FunForKids2.png" class="flickr-box" rel="FunForKids" /><a href="assets/images/FunForKids/FunForKids3.png" class="flickr-box" rel="FunForKids" />
-		
-		<span>iPad App: Balance Worksheet</span>
-		<a href="assets/images/TB/TB1.png" class="flickr-box" rel="TB"><img src="assets/images/TB/TBthumb.png" title="iPad App - Balance Worksheet" /></a>
+			<p>
+			Thinking this must be a settings issue, I dived into his project settings looking for that one linker flag that must be wrong. I saw nothing. He had his path set up properly to find the static library under <code>/usr/local/mysql</code> and the static library was added to the Build Phases area properly. Strange. So I started digging around with the output file. Using <strong>otool</strong> I inspected the file:
+			</p>
+			
+			<p>
+				<code>$ otool -L StaticLink</code>
+			</p>
+			<p>
+				<img src="/articles/images/2011-12-07/otool.png" width="742" height="460" alt="Otool">
+				<p style="font-style:italic"><blockquote><strong>otool</strong> is a small tool that ships with Xcode. It gives you the ability to display specified parts of object files or libraries. Using the -L switch, I'm asking the object file to show me the shared libraries this object file uses.</blockquote>
+				</p>
+			</p>
+			
+			<p>
+			In his case, however, otool showed me that the library was still dynamically linking against the dylib version of the library. The interesting part is that both the static library and the dynamic library lived in the same location on disk. Xcode seems to prefer linking against dynamic libraries over static libraries so it just loaded the dylib.
+			</p>
+			
+			<p>
+				To get this working as expected I had to remove the static library from his project and add a line in OTHER_LINKER_FLAGS that is a direct link to the static library (/usr/local/mysql/libmysql.a). This way the linker is forced to load the static library over the dynamic library. Pretty straight forward but it was pretty frustrating for a while there.
+			</p>
+		</div>
 	</div>
-	
-</div><!-- end content -->
-<div class="clear"></div>
 
+</div>
+<div class="clear"></div>
+					<div class="clear"></div>
+					<div id="jsh_sharing">
+						<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+						<iframe border="0" scrolling="no" width="78" height="20" allowtransparency="true" frameborder="0" style="margin-bottom: -3px; z-index: 1338; border: 0px; background-color: transparent; overflow: hidden;" src="http://www.instapaper.com/e2?url=http%3A%2F%2Flog.jsh.in/2011/12/07/staticlib-xcode-cpp/&title=Static Linking with C++ Project in Xcode"></iframe>
+					</div>
+					<div class="clear"></div>
+				</div><!-- end posts -->
+			</div><!-- end content -->
+			<div class="clear"></div>
+			
 			<div id="push"></div>
 		</div><!-- end page wrawpper -->
 

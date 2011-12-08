@@ -4,13 +4,56 @@
  <title>The blog of Josh Johnson</title>
  <link href="http://log.jsh.in/atom.xml" rel="self"/>
  <link href="http://jsh.in/"/>
- <updated>2011-12-06T22:18:23-05:00</updated>
+ <updated>2011-12-07T22:34:47-05:00</updated>
  <id>http://jsh.in/</id>
  <author>
    <name>Josh Johnson</name>
    <email>jnjosh@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Static Linking with C++ Project in Xcode</title>
+   <link href="http://jsh.in/2011/12/07/staticlib-xcode-cpp/"/>
+   <updated>2011-12-07T00:00:00-05:00</updated>
+   <id>http://jsh.in/2011/12/07/staticlib-xcode-cpp</id>
+   <content type="html">&lt;div id=&quot;post_staticcpp&quot; class=&quot;post&quot;&gt;
+	&lt;div class=&quot;container_12&quot;&gt;
+		
+		&lt;div class=&quot;grid_12&quot;&gt;
+			&lt;h1&gt;&lt;a href=&quot;&quot;&gt;Static Linking with C++ Project in Xcode&lt;/a&gt;&lt;/h1&gt;
+			&lt;span class=&quot;posted&quot;&gt;Posted on December 07, 2011 in &lt;/span&gt;&lt;span class=&quot;tags&quot;&gt;Development and Xcode&lt;/span&gt;
+
+			&lt;p style=&quot;font-style:italic&quot;&gt;
+			This week at NSCoder Night, another developer was trying to statically link the MySQL library. He had initially linked it as a dynamic library and couldn't seem to get it working with Xcode. After working with it for a little while I figured out what needed to happen; and it wasn't clear. Here I'll discuss what process I went through to track down the problem and what tools I used.
+			&lt;/p&gt;
+
+			&lt;p&gt;
+			Thinking this must be a settings issue, I dived into his project settings looking for that one linker flag that must be wrong. I saw nothing. He had his path set up properly to find the static library under &lt;code&gt;/usr/local/mysql&lt;/code&gt; and the static library was added to the Build Phases area properly. Strange. So I started digging around with the output file. Using &lt;strong&gt;otool&lt;/strong&gt; I inspected the file:
+			&lt;/p&gt;
+			
+			&lt;p&gt;
+				&lt;code&gt;$ otool -L StaticLink&lt;/code&gt;
+			&lt;/p&gt;
+			&lt;p&gt;
+				&lt;img src=&quot;/articles/images/2011-12-07/otool.png&quot; width=&quot;742&quot; height=&quot;460&quot; alt=&quot;Otool&quot;&gt;
+				&lt;p style=&quot;font-style:italic&quot;&gt;&lt;blockquote&gt;&lt;strong&gt;otool&lt;/strong&gt; is a small tool that ships with Xcode. It gives you the ability to display specified parts of object files or libraries. Using the -L switch, I'm asking the object file to show me the shared libraries this object file uses.&lt;/blockquote&gt;
+				&lt;/p&gt;
+			&lt;/p&gt;
+			
+			&lt;p&gt;
+			In his case, however, otool showed me that the library was still dynamically linking against the dylib version of the library. The interesting part is that both the static library and the dynamic library lived in the same location on disk. Xcode seems to prefer linking against dynamic libraries over static libraries so it just loaded the dylib.
+			&lt;/p&gt;
+			
+			&lt;p&gt;
+				To get this working as expected I had to remove the static library from his project and add a line in OTHER_LINKER_FLAGS that is a direct link to the static library (/usr/local/mysql/libmysql.a). This way the linker is forced to load the static library over the dynamic library. Pretty straight forward but it was pretty frustrating for a while there.
+			&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</content>
+ </entry>
  
  <entry>
    <title>CocoaConf Raleigh 2011</title>
